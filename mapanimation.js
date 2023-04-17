@@ -1,7 +1,7 @@
 const url = "https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip";
 
 const markers = [];
-// Pass in API Key with the request using the header x-api-key
+
 async function load() {
   const locations = await getBusLocations();
   console.log(new Date());

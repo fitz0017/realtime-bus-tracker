@@ -1,6 +1,6 @@
 # realtime-bus-tracker
 
-This tracker will show a standard, red marker for each bus on the Google Map on the MBTA Bus Route #1.
+This tracker will show a standard, red marker for each buses' near-realtime location on a Google Map on the MBTA Bus Route #1. It updates every 15 seconds from the MBTA API. Uses standard light styling and
 
 ## Make It Run
 
@@ -11,6 +11,7 @@ This tracker will show a standard, red marker for each bus on the Google Map on 
 ## Future enhancements
 
 - Replace tag icons with vehicle icons
+- Create interface to change mapped routes dynamically
 - Add Tomorrow.ai integration for weather at bus locations
 - Add additional metadata to the icons, perhaps bus id, latlong coords
 - More error handling

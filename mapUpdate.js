@@ -40,5 +40,5 @@ async function move() {
   setTimeout(move, 15000);
 }
 
-// load();
-// move();
+load();
+move();

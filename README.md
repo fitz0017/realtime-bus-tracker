@@ -12,6 +12,6 @@ This tracker will show a standard, red marker for each bus on the Google Map on 
 - Add additional metadata to the icons, perhaps bus id, latlong coords
 - More error handling
 
-## MIT License see licensing info 
+MIT License see licensing page 
 
 ![image](https://user-images.githubusercontent.com/11213335/232378407-6d909c4c-35bb-4837-b371-8258af06a9c0.png)

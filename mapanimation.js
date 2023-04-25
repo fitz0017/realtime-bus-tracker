@@ -4,6 +4,7 @@ const markers = [];
 
 async function load() {
   const locations = await getBusLocations();
+  const wx = await getWeather();
   console.log(new Date());
   console.log(locations);
 

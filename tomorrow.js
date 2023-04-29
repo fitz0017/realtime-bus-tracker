@@ -5,6 +5,6 @@ var long = ``;
 var fields = "temperature&timesteps=1hr&units=metric";
 
 async function getWeather(location) {
-  let url = `${tomorrowUrl}&location=${location}&fields=${fields}apiKey=${tomorrowKey}`;
+  let url = `${tomorrowUrl}&location=${location}&fields=${fields}apiKey=${}`;
   const wx = await fetch(url);
 }

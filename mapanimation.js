@@ -14,7 +14,7 @@ async function getWeather(apiKey) {
   );
   const wx = await res.json();
   console.log(wx["data"]);
-  // let url = `https://api.tomorrow.io/v4/timelines?&location=41.230698,-73.064034&fields=temperature&timesteps=1hr&units=metric&apiKey=ognXDdNVoElqST4Uok8jClJ6XW9EGThB`;
+  // let url = `https://api.tomorrow.io/v4/timelines?&location=41.230698,-73.064034&fields=temperature&timesteps=1hr&units=metric&apiKey=`;
   // let headers = {
   //   accept: "application/json",
   //   method: "GET",

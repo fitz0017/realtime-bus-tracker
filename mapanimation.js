@@ -1,10 +1,30 @@
 const url = "https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip";
-
 const markers = [];
+
+const tomorrowUrl =
+  "https://api.tomorrow.io/v4/weather/realtime?location=41.230698,-73.064034&fields=temperature&timesteps=1h&units=metric&apikey=";
+var lat = ``;
+var long = ``;
+
+var fields = "temperature&timesteps=1hr&units=metric";
+
+async function getWeather(apiKey) {
+  const res = await fetch(
+    `https://api.tomorrow.io/v4/weather/realtime?location=41.230698,-73.064034&apikey=${apiKey}`
+  );
+  const wx = await res.json();
+  console.log(wx["data"]);
+  // let url = `https://api.tomorrow.io/v4/timelines?&location=41.230698,-73.064034&fields=temperature&timesteps=1hr&units=metric&apiKey=ognXDdNVoElqST4Uok8jClJ6XW9EGThB`;
+  // let headers = {
+  //   accept: "application/json",
+  //   method: "GET",
+  // };
+  // const wx = await fetch(url, headers);
+  // return wx;
+}
 
 async function load() {
   const locations = await getBusLocations();
-  const wx = await getWeather();
   console.log(new Date());
   console.log(locations);
 
@@ -36,10 +56,12 @@ async function move() {
       updatedLocations[i]["attributes"]["longitude"]
     );
     markers[i]["position"] = latlng;
+    let location = `${updatedLocations[i]["attributes"]["latitude"]},${updatedLocations[i]["attributes"]["longitude"]}`;
+    // console.log(getWeather(`41.230698,-73.064034`));
     markers[i].setMap(map);
   }
   setTimeout(move, 15000);
 }
 
-load();
-move();
+// load();
+// move();
